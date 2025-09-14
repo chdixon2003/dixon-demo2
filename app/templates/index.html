@@ -5,15 +5,15 @@
 <div class="text-center">
     <div class="card shadow-lg p-5 mb-5">
         <h1 class="display-4 mb-3">
-            <i class="fas fa-graduation-cap me-3"></i>Georgia College & State University
+            <i class="fas fa-seedling me-3"></i>Dixon Hay Farms
         </h1>
-        <h2 class="h3 text-muted mb-4">MIS Flask Starter Kit</h2>
+        <h2 class="h3 text-muted mb-4">Quality Hay & Agricultural Services</h2>
         
-        <p class="lead mb-4">Welcome to GCSU's Flask development environment! This starter kit provides a foundation for building web applications using Python and Flask.</p>
+        <p class="lead mb-4">Welcome to Dixon Hay Farms! We provide premium quality hay and comprehensive agricultural services to farmers and livestock owners throughout the region.</p>
         
         <div class="row justify-content-center mb-4">
             <div class="col-md-10">
-                <p class="mb-0">Georgia College & State University, located in Milledgeville, Georgia, is a public liberal arts university known for its commitment to undergraduate education and student success. Our MIS program prepares students with practical skills in software development, data analysis, and modern web technologies for business applications.</p>
+                <p class="mb-0">Dixon Hay Farms is a family-owned operation specializing in high-quality hay production and custom baling services. With modern John Deere equipment and years of experience, we deliver reliable service and premium products to support your agricultural needs.</p>
             </div>
         </div>
         
@@ -21,18 +21,18 @@
             <div class="col-md-6 mb-3">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-code fa-3x mb-3" style="color: var(--gcsu-blue);"></i>
-                        <h5 class="card-title">Modern Development</h5>
-                        <p class="card-text">Built with Flask, Bootstrap, and modern web technologies for responsive design.</p>
+                        <i class="fas fa-tractor fa-3x mb-3" style="color: var(--john-deere-green);"></i>
+                        <h5 class="card-title">Modern Equipment</h5>
+                        <p class="card-text">John Deere tractors and round balers for efficient, high-quality hay production.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <div class="card h-100">
                     <div class="card-body text-center">
-                        <i class="fas fa-database fa-3x mb-3" style="color: var(--gcsu-green);"></i>
-                        <h5 class="card-title">Database Ready</h5>
-                        <p class="card-text">Pre-configured for MySQL/PostgreSQL with example CRUD operations.</p>
+                        <i class="fas fa-leaf fa-3x mb-3" style="color: var(--john-deere-yellow);"></i>
+                        <h5 class="card-title">Quality Products</h5>
+                        <p class="card-text">Premium hay varieties and custom baling services for all your livestock needs.</p>
                     </div>
                 </div>
             </div>
@@ -49,6 +49,75 @@
     </div>
 </div>
 
+<!-- Farm Gallery Section -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <h3 class="text-center mb-4">
+                    <i class="fas fa-camera me-2"></i>Our Farm & Equipment
+                </h3>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ url_for('static', filename='assets/john_deere_baler.jpg') }}" 
+                                 class="card-img-top farm-image" 
+                                 alt="John Deere Tractor with Round Baler"
+                                 onerror="this.src='{{ url_for('static', filename='assets/olympics.jpg') }}';">
+                            <div class="card-body">
+                                <h5 class="card-title">John Deere Equipment</h5>
+                                <p class="card-text">Our modern John Deere tractor with round baler ensures efficient, high-quality hay production with perfectly formed bales every time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ url_for('static', filename='assets/hay_field.jpg') }}" 
+                                 class="card-img-top farm-image" 
+                                 alt="Hay Field Panorama"
+                                 onerror="this.src='{{ url_for('static', filename='assets/uswnt.jpg') }}';">
+                            <div class="card-body">
+                                <h5 class="card-title">Premium Hay Fields</h5>
+                                <p class="card-text">Our expansive fields produce high-quality hay varieties, carefully maintained to ensure optimal nutrition for your livestock.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ url_for('static', filename='assets/hay_bales.jpg') }}" 
+                                 class="card-img-top farm-image" 
+                                 alt="Round Hay Bales in Field"
+                                 onerror="this.src='{{ url_for('static', filename='assets/olympics.jpg') }}';">
+                            <div class="card-body">
+                                <h5 class="card-title">Quality Round Bales</h5>
+                                <p class="card-text">Perfectly formed round bales ready for delivery. Our baling process ensures optimal moisture content and preservation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <img src="{{ url_for('static', filename='assets/farm_equipment.jpg') }}" 
+                                 class="card-img-top farm-image" 
+                                 alt="Farm Equipment Close-up"
+                                 onerror="this.src='{{ url_for('static', filename='assets/uswnt.jpg') }}';">
+                            <div class="card-body">
+                                <h5 class="card-title">Professional Equipment</h5>
+                                <p class="card-text">State-of-the-art agricultural equipment maintained to the highest standards for reliable, efficient operation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <style>
     .card {
         background: rgba(255, 255, 255, 0.95);
@@ -56,16 +125,31 @@
     }
     
     .btn-outline-secondary {
-        border-color: var(--gcsu-blue);
-        color: var(--gcsu-blue);
+        border-color: var(--john-deere-green);
+        color: var(--john-deere-green);
     }
     
     .btn-outline-secondary:hover {
-        background-color: var(--gcsu-blue);
-        border-color: var(--gcsu-blue);
+        background-color: var(--john-deere-green);
+        border-color: var(--john-deere-green);
         color: white;
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 51, 153, 0.3);
+        box-shadow: 0 4px 8px rgba(54, 124, 43, 0.3);
+    }
+    
+    .farm-image {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        transition: transform 0.3s ease;
+    }
+    
+    .farm-image:hover {
+        transform: scale(1.05);
+    }
+    
+    .card-img-top {
+        border-radius: 8px 8px 0 0;
     }
 </style>
 
